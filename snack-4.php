@@ -1,16 +1,17 @@
 <?php
-    $array = [];
+    $listaNumeri = [];
+    $counter = 0;
 
-    for ($i = 0; $i < 15; $i++) { 
+while (count($listaNumeri) < 15) {
+    $num = rand(1, 100);
 
-        $randomNumber = rand();
+    if (!in_array($num, $listaNumeri)) {
+        $listaNumeri[] = $num;
+    }
 
-        $array[] = $randomNumber;
-        
-    } 
-?>
+    $counter++;
+}
 
-<h1><?php echo $array ?></h1>
-
-    
+var_dump($counter);
+var_dump($listaNumeri);
 
