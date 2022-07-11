@@ -18,11 +18,16 @@ if (is_numeric($userAge)) {
     $access = false;
 }
 
-if (strpos($email, '@' && '.') ) {
-
+if (strpos($email, '@' && '.') !== true) {
+    $access = false;
 }
 
+if ($access === true) {
+    echo 'Access permited';
+}
 
 }
 ?>
+
+
 
